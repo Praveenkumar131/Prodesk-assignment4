@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="step-group">
+        <div class="ind">1</div>
+        <div class="tit">
+          <span class="st">STEP 1</span>
+          <span class="info">YOUR INFO</span>
+        </div>
+      </div>
+      <div class="step-group">
+        <div class="ind">2</div>
+        <div class="tit">
+          <span class="st">STEP 2</span>
+          <span class="info">SELECT PLAN</span>
+        </div>
+      </div>
+      <div class="step-group">
+        <div class="ind">3</div>
+        <div class="tit">
+          <span class="st">STEP 3</span>
+          <span class="info">ADD-ONS</span>
+        </div>
+      </div>
+      <div class="step-group">
+        <div class="ind">4</div>
+        <div class="tit">
+          <span class="st">STEP 4</span>
+          <span class="info">SUMMARY</span>
+        </div>
+      </div>
+    </div>
+
+    <form id="form">
+      <!-- Step 1 -->
+      <div class="form-step active">
+        <div class="heading">
+          <h2>Personal info</h2>
+          <p>Please provide your name, email address, and phone number.</p>
+        </div>
+        <div class="main">
+          <label>Name</label>
+          <input type="text" placeholder="e.g. Shiv Kumar" name="name" required>
+
+          <label>Email Address</label>
+          <input type="email" placeholder="e.g. shiv01@gmail.com" name="email" required>
+
+          <label>Phone Number</label>
+          <input type="tel" placeholder="e.g. +91 2542928" name="phone" required>
+        </div>
+        <div class="buttons">
+          <button type="button" class="next-btn">Next Step</button>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-step">
+        <h2>Select Plan</h2>
+        <p>Choose your subscription plan.</p>
+        <label><input type="radio" name="plan" value="Basic" required> Basic Plan</label>
+        <label><input type="radio" name="plan" value="Pro"> Pro Plan</label>
+        <label><input type="radio" name="plan" value="Premium"> Premium Plan</label>
+        <div class="buttons">
+          <button type="button" class="prev-btn">Previous</button>
+          <button type="button" class="next-btn">Next Step</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="form-step">
+        <h2>Add-ons</h2>
+        <p>Select any add-ons you want.</p>
+        <label><input type="checkbox" name="addon" value="Support"> 24/7 Support</label>
+        <label><input type="checkbox" name="addon" value="Storage"> Extra Storage</label>
+        <label><input type="checkbox" name="addon" value="Reports"> Monthly Reports</label>
+        <div class="buttons">
+          <button type="button" class="prev-btn">Previous</button>
+          <button type="button" class="next-btn">Next Step</button>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="form-step">
+        <h2>Summary</h2>
+        <p>Review your information before submitting.</p>
+        <div id="summary"></div>
+        <div class="buttons">
+          <button type="button" class="prev-btn">Previous</button>
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
